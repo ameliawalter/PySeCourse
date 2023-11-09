@@ -15,3 +15,4 @@ class BasePage(Page):
     @property
     def menu(self):
         return MenuRegion(self)
+    # dzięki temu dekoratorowi można wywoływać tę metodę jak instację obiektów, tzn. bez ()
