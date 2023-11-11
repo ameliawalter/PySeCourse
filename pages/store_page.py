@@ -10,7 +10,7 @@ from pages.regions.menu_region import MenuRegion
 
 class StorePage(BasePage):
     _products_list = (By.CSS_SELECTOR, "ul[class='products columns-4']")
-    _product = (By.CSS_SELECTOR, "li[class*='product type-product']")
+    _product = (By.CSS_SELECTOR, "a[class*='Product-link']")
 
     @property
     def loaded(self):
@@ -27,7 +27,7 @@ class StorePage(BasePage):
         assert menu.amount != "0.00"
 
 class Item(BaseRegion):
-    _name = (By.CSS_SELECTOR, "h2[class*='woocommerce-loop-product']")
+    _name = (By.CSS_SELECTOR, "h2[class='woocommerce-loop-product__title']")
     _add_to_cart_button = (By.CSS_SELECTOR, "a[class*='add_to_cart_button']")
 
     @property
